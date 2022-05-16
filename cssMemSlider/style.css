@@ -108,6 +108,10 @@ body {
 }
 
 @media (max-width: 767px) {
+  .container {
+    max-width: 96vw;
+  }
+
   .slider__bottom {
     flex-direction: column;
     align-items: center;
