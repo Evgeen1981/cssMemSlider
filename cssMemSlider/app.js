@@ -15,19 +15,22 @@ function changeContent() {
     event.target.classList.add('slider__control--active');
     sliderImg.classList.add('animation__back');
 
+    sliderText.classList.add('animation__back');
+
     setTimeout(() => {
 
       sliderImg.classList.add('animation');
-      sliderImg.classList.remove('animation__back');
-    }, 1000);
+      sliderText.classList.add('animation');
 
-    setTimeout(() => {
       sliderImg.src = `${list[num - 1]["img"]}`;
       sliderText.textContent = `${list[num - 1]["text"]}`;
-    }, 1000);
 
+      sliderImg.classList.remove('animation__back');
+      sliderText.classList.remove('animation__back');
+    }, 400);
 
     sliderImg.classList.remove('animation');
+    sliderText.classList.remove('animation');
   })
 
 }
